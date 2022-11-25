@@ -22,10 +22,10 @@ public class DeviceDescriptionController {
     DeviceDescriptionService deviceDescriptionService;
 
     @GetMapping(value = "/dd.xml",  produces = MediaType.APPLICATION_XML_VALUE)
-    public UpnpDto deviceDescription(HttpServletResponse response) throws UnknownHostException {
+    public UpnpDto deviceDescription(HttpServletResponse response) {
 
         logger.info("Giving device info to device {}", "todo");
-
+        // TODO: retrieve ip in more efficient way
         response.addHeader("Application-URL", "http://192.168.1.104:8080/apps");
         //response.addHeader("Application-URL", "http://"+InetAddress.getLocalHost().getHostAddress()+":8080/apps");
         return deviceDescriptionService.deviceDescription();

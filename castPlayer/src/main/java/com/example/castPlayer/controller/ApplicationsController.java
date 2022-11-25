@@ -25,15 +25,8 @@ public class ApplicationsController {
     Youtube youtube;
 
     @GetMapping(value = "apps/YouTube",  produces = MediaType.APPLICATION_XML_VALUE)
-            //produces = "text/xml; charset=utf-8")
     public ServiceDto youTube() {
         return youtube.getStatus();
-/*        return "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-                "<service xmlns=\"urn:dial-multiscreen-org:schemas:dial\" dialVer=\"1.7\">\n" +
-                "  <name>YouTube</name>\n" +
-                "  <options allowStop=\"true\"/>\n" +
-                "  <state>stopped</state>\n" +
-                "</service>";*/
     }
 
     @PostMapping(value = "apps/YouTube")

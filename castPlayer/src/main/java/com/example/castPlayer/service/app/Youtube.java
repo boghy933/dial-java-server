@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class Youtube {
 
+    // TODO: use h2 to track of app status
     public ServiceDto getStatus() {
 
         ServiceDto serviceDto = new ServiceDto();
