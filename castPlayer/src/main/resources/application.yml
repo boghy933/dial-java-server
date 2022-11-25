@@ -1,0 +1,8 @@
+logging:
+  level:
+    root: INFO
+
+configuration:
+  upnp:
+    friendlyName: SpringCast
+  host: 192.168.1.104:8080
